@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @taks = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -48,6 +48,7 @@ class TasksController < ApplicationController
     
   end
   
+   private
   # Strong Parameter
   def task_params
     params.require(:task).permit(:content)
